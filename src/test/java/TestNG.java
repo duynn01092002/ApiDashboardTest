@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class TestNG {
-    String HOST = "ec2-54-204-158-246.compute-1.amazonaws.com";
+    String HOST = "http://ec2-54-204-158-246.compute-1.amazonaws.com/";
     String login_url = HOST + ":50001/auth/login";
     String home_url = HOST + ":50001/";
     String selenium_grid = HOST + ":4444/wd/hub";
