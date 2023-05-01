@@ -17,9 +17,9 @@ public class TestNG {
     String HOST = "http://ec2-54-204-158-246.compute-1.amazonaws.com/";
     String publicIP = "http://54.204.158.246";
     String privateIP = "http://172.31.27.247";
-    String login_url = privateIP + ":50001/auth/login";
-    String home_url = privateIP + ":50001/";
-    String selenium_grid = privateIP + ":4444/wd/hub";
+    String login_url = publicIP + ":50001/auth/login";
+    String home_url = publicIP + ":50001/";
+    String selenium_grid = publicIP + ":4444/wd/hub";
     String signup_url = "http://127.0.0.1:50001/auth/signup";
     String profile_url = "http://127.0.0.1:50001/profile";
     @Test(priority = 1)
