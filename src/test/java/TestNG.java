@@ -14,16 +14,18 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class TestNG {
-    String login_url = "http://127.0.0.1:50001/auth/login";
-    String home_url = "http://192.168.1.4:50001/";
+    String HOST = "ec2-54-204-158-246.compute-1.amazonaws.com";
+    String login_url = HOST + ":50001/auth/login";
+    String home_url = HOST + ":50001/";
+    String selenium_grid = HOST + ":4444/wd/hub";
     String signup_url = "http://127.0.0.1:50001/auth/signup";
     String profile_url = "http://127.0.0.1:50001/profile";
     @Test(priority = 1)
     public void test01() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
-        URL url = new URL("http://localhost:4444/wd/hub");
+        URL url = new URL(selenium_grid);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
-        driver.get("http://192.168.1.4:50001/auth/login");
+        driver.get(login_url);
         driver.findElement(By.name("username")).sendKeys("ngocduy");
         driver.findElement(By.name("password")).sendKeys("123Duy");
         driver.findElement(By.name("admin")).click();
@@ -35,10 +37,9 @@ public class TestNG {
     @Test(priority = 2)
     public void test02() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.firefox();
-        URL url = new URL("http://192.168.1.4:4444/wd/hub");
+        URL url = new URL(selenium_grid);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get("https://www.google.com");
-        driver.findElement(By.name("q")).sendKeys("docker-selenium");
         System.out.println(driver.getCurrentUrl());
         driver.quit();
     }
