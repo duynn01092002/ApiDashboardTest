@@ -1,2 +1,45 @@
-package PACKAGE_NAME;public class TestNG {
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+public class TestNG {
+    String login_url = "http://127.0.0.1:50001/auth/login";
+    String home_url = "http://192.168.1.4:50001/";
+    String signup_url = "http://127.0.0.1:50001/auth/signup";
+    String profile_url = "http://127.0.0.1:50001/profile";
+    @Test(priority = 1)
+    public void test01() throws InterruptedException, MalformedURLException {
+        DesiredCapabilities dc = DesiredCapabilities.chrome();
+        URL url = new URL("http://localhost:4444/wd/hub");
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get("http://192.168.1.4:50001/auth/login");
+        driver.findElement(By.name("username")).sendKeys("ngocduy");
+        driver.findElement(By.name("password")).sendKeys("123Duy");
+        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        assert driver.getCurrentUrl().equals(home_url);
+        driver.quit();
+    }
+
+    @Test(priority = 2)
+    public void test02() throws InterruptedException, MalformedURLException {
+        DesiredCapabilities dc = DesiredCapabilities.firefox();
+        URL url = new URL("http://192.168.1.4:4444/wd/hub");
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get("https://www.google.com");
+        driver.findElement(By.name("q")).sendKeys("docker-selenium");
+        System.out.println(driver.getCurrentUrl());
+        driver.quit();
+    }
 }
