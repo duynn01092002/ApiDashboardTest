@@ -53,7 +53,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.TestNG.test01">
+  <component name="RunManager" selected="TestNG.TestNG">
     <configuration name="TestNG" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -115,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestNG.test01" />
         <item itemvalue="TestNG.TestNG" />
+        <item itemvalue="TestNG.TestNG.test01" />
         <item itemvalue="TestNG.TestNG.test02" />
         <item itemvalue="TestNG.TestNG.test_no_credentials_login" />
         <item itemvalue="TestNG.TestNG.test_successful_login" />
@@ -137,7 +137,7 @@
       <workItem from="1682772151102" duration="8251000" />
       <workItem from="1682829994771" duration="4621000" />
       <workItem from="1682937536285" duration="1243000" />
-      <workItem from="1682947911489" duration="1299000" />
+      <workItem from="1682947911489" duration="1972000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1682948306113</created>
@@ -146,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682948306113</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1682949488185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682949488185</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1682949617251</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682949617252</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
