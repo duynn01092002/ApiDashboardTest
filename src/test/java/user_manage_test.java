@@ -34,7 +34,7 @@ public class user_manage_test {
         for (WebElement element : elementEmailList) {
             stringEmailList.add(element.getText());
         }
-        assert stringEmailList.contains("nguyenngocduy12a2@gmail.com");
+        assert stringEmailList.contains("nhom06gmail.com");
         driver.quit();
     }
 
@@ -58,7 +58,7 @@ public class user_manage_test {
         }
         int pos = 0;
         for (int i = 0;i < stringEmailList.size();i++) {
-            if (stringEmailList.get(i).equals("nguyenngocduy12a2@gmail.com")) {
+            if (stringEmailList.get(i).equals("nhom06@gmail.com")) {
                 pos = i + 1;
             }
         }
