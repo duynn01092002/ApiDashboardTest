@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7d64552-8b60-4929-a7ea-36509d05f9de" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data_from_api_test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/profile_test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/user_manage_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/366e495a7067bfb55d8acdcdc882a7bfb3b36daa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e913732efcfcfbf9c0714a3e97861c085652c611" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/6/366e495a7067bfb55d8acdcdc882a7bfb3b36daa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/9/e913732efcfcfbf9c0714a3e97861c085652c611" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/login_test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/signup_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/signup_test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,45 +67,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.user_manage_test.testRecoveryAllUser">
-    <configuration name="data_from_api_test" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.api_test.testInvalidTokenGetData">
+    <configuration name="api_test.testGetDataFail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="data_from_api_test" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="profile_test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="profile_test" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="user_manage_test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="user_manage_test" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="user_manage_test.testDeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="user_manage_test" />
-      <option name="METHOD_NAME" value="testDeleteUser" />
+      <option name="MAIN_CLASS_NAME" value="api_test" />
+      <option name="METHOD_NAME" value="testGetDataFail" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -113,11 +80,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="user_manage_test.testRecoveryAllUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="api_test.testGetToken (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="user_manage_test" />
-      <option name="METHOD_NAME" value="testRecoveryAllUser" />
+      <option name="MAIN_CLASS_NAME" value="api_test" />
+      <option name="METHOD_NAME" value="testGetToken" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api_test.testGetTokenFail" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="api_test" />
+      <option name="METHOD_NAME" value="testGetTokenFail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api_test.testInvalidTokenGetData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="api_test" />
+      <option name="METHOD_NAME" value="testInvalidTokenGetData" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api_test.testNoTokenGetData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="api_test" />
+      <option name="METHOD_NAME" value="testNoTokenGetData" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.user_manage_test.testRecoveryAllUser" />
-        <item itemvalue="TestNG.user_manage_test.testDeleteUser" />
-        <item itemvalue="TestNG.user_manage_test" />
-        <item itemvalue="TestNG.profile_test" />
-        <item itemvalue="TestNG.data_from_api_test" />
+        <item itemvalue="TestNG.api_test.testInvalidTokenGetData" />
+        <item itemvalue="TestNG.api_test.testNoTokenGetData" />
+        <item itemvalue="TestNG.api_test.testGetDataFail" />
+        <item itemvalue="TestNG.api_test.testGetToken (1)" />
+        <item itemvalue="TestNG.api_test.testGetTokenFail" />
       </list>
     </recent_temporary>
   </component>
@@ -154,6 +157,8 @@
       <workItem from="1683031195940" duration="10916000" />
       <workItem from="1683042709897" duration="49000" />
       <workItem from="1683083589872" duration="10153000" />
+      <workItem from="1683164821432" duration="1832000" />
+      <workItem from="1683193109599" duration="5128000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1682948306113</created>
