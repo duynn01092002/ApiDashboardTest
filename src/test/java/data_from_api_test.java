@@ -1,16 +1,19 @@
 import io.github.cdimascio.dotenv.Dotenv;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
+import org.testng.reporters.XMLConstants;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class data_from_api_test {
@@ -18,6 +21,9 @@ public class data_from_api_test {
     private final String selenium_grid_url = dotenv.get("SELENIUM_GRID_URL");
     private final String home_url = dotenv.get("HOME_URL");
     private final String login_url = dotenv.get("LOGIN_URL");
+    int totalItemInHO = 0;
+    int totalStatusOK = 0;
+    int totalStatusFail = 0;
     public static JSONObject getData() {
         String clientId = "H8J1NKema4LrrUu6TYq6kH5if1JX6UyQ";
         String clientSecret = "RimknsnMuXAzi6gzWqinaUyLMgS95tbp";
@@ -37,7 +43,28 @@ public class data_from_api_test {
         responseJson = new JSONObject(response.getBody().asString());
         return responseJson;
     }
-
+    public void getDataFromAPI() {
+        JSONObject data = getData();
+        this.totalItemInHO = 0;
+        this.totalStatusOK = 0;
+        this.totalStatusFail = 0;
+        Iterator<String> keys = data.keys();
+        while (keys.hasNext()) {
+            String keyHO = keys.next();
+            JSONObject childrenDict = data.getJSONObject(keyHO);
+            this.totalItemInHO += childrenDict.length();
+            Iterator<String> hashKeys = childrenDict.keys();
+            while (hashKeys.hasNext()) {
+                String hashKey = hashKeys.next();
+                JSONObject itemDict = childrenDict.getJSONObject(hashKey);
+                if (itemDict.getString("status").equals("ok")) {
+                    totalStatusOK++;
+                } else {
+                    totalStatusFail++;
+                }
+            }
+        }
+    }
     @Test
     public void testTopStatusOK() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
@@ -74,5 +101,93 @@ public class data_from_api_test {
             }
         }
         assert flag == true;
+    }
+    @Test
+    public void testTotal_HO() throws MalformedURLException {
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get(login_url);
+        driver.findElement(By.name("username")).sendKeys("duan");
+        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        List<WebElement> totalHOWeb = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
+        String totalHOText = totalHOWeb.get(0).getText(); // lấy giá trị text của thẻ h3
+        String[] totalHOArray = totalHOText.split(" "); // tách chuỗi bằng dấu cách
+        String actualTotalHO = totalHOArray[0]; // lấy giá trị số (1287) totalHO
+        System.out.println("Actual Total HO value: " + actualTotalHO);
+        JSONObject responeJson = getData();
+        String expectedTotalHO  = String.valueOf(responeJson.length());
+        System.out.println("Expected Total HO value: " + expectedTotalHO);
+        assert expectedTotalHO.equals(actualTotalHO);
+    }
+    @Test
+    public void testTotal_children_in_HO() throws MalformedURLException {
+        getDataFromAPI();
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get(login_url);
+        driver.findElement(By.name("username")).sendKeys("duan");
+        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        List<WebElement> webElements = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
+        String totalChildrenInHOText = webElements.get(1).getText(); // lấy giá trị text của thẻ h3
+        String[] totalChildrenInHOArray = totalChildrenInHOText.split(" "); // tách chuỗi bằng dấu cách
+        String actualChildrenInHO = totalChildrenInHOArray[0]; // lấy giá trị số Total Children in HO
+        System.out.println("Actual Total Children in HO value: " + actualChildrenInHO);
+        String expectedChildrenInHO = String.valueOf(totalItemInHO);
+        System.out.println("Expected Total Children in HO value: " + expectedChildrenInHO);
+        assert expectedChildrenInHO.equals(actualChildrenInHO);
+    }
+    @Test
+    public void testTotal_Status_OK() throws MalformedURLException {
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get(login_url);
+        driver.findElement(By.name("username")).sendKeys("duan");
+        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        List<WebElement> webElements = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
+        String totalStatusOkText = webElements.get(2).getText(); // lấy giá trị text của thẻ h3
+        String[] totalStatusOkArray = totalStatusOkText.split(" "); // tách chuỗi bằng dấu cách
+        String actualTotalStatusOk = totalStatusOkArray[0]; // lấy giá trị số Total Status OK
+        System.out.println("Actual Total Status OK value: " + actualTotalStatusOk);
+        getDataFromAPI();
+        String expectedTotalStatusOk = String.valueOf(totalStatusOK);
+        System.out.println("Expected Total Status OK value: " + expectedTotalStatusOk);
+        assert expectedTotalStatusOk.equals(actualTotalStatusOk);
+    }
+    @Test
+    public void testTotal_Status_Fail() throws MalformedURLException {
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get(login_url);
+        driver.findElement(By.name("username")).sendKeys("duan");
+        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        List<WebElement> webElements = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
+        String totalStatusFailText = webElements.get(3).getText(); // lấy giá trị text của thẻ h3
+        String[] totalStatusFailArray = totalStatusFailText.split(" "); // tách chuỗi bằng dấu cách
+        String actualTotalStatusFail = totalStatusFailArray[0]; // lấy giá trị số Total Status Fail
+        System.out.println("Actual Total Status Fail value: " + actualTotalStatusFail);
+        getDataFromAPI();
+        String expectedTotalStatusFail = String.valueOf(totalStatusFail);
+        System.out.println("Expected Total Status Fail value: " + expectedTotalStatusFail);
+        assert expectedTotalStatusFail.equals(actualTotalStatusFail);
     }
 }
