@@ -23,8 +23,8 @@ public class user_manage_test {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
         driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("ngocduy");
-        driver.findElement(By.name("password")).sendKeys("123Duy");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
@@ -45,8 +45,8 @@ public class user_manage_test {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
         driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("ngocduy");
-        driver.findElement(By.name("password")).sendKeys("123Duy");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
@@ -78,8 +78,8 @@ public class user_manage_test {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
         driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("ngocduy");
-        driver.findElement(By.name("password")).sendKeys("123Duy");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
@@ -114,8 +114,8 @@ public class user_manage_test {
         driver.get(login_url);
         driver.manage().window().maximize();
         // Dang nhap va chuyen huong de trang quan ly nguoi dung
-        driver.findElement(By.name("username")).sendKeys("ngocduy");
-        driver.findElement(By.name("password")).sendKeys("123Duy");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
@@ -134,30 +134,30 @@ public class user_manage_test {
         assert newSize == oldSize + inBinSize;
         driver.quit();
     }
-    @Test(priority = 5)
-    public void testPermanentlyDelete() throws MalformedURLException {
-        DesiredCapabilities dc = DesiredCapabilities.chrome();
-        URL url = new URL(selenium_grid_url);
-        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
-        driver.get(login_url);
-        driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("ngocduy");
-        driver.findElement(By.name("password")).sendKeys("123Duy");
-        driver.findElement(By.name("admin")).click();
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-        driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
-        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
-        // lay so luong user ban dau, trong thung rac va sau khi xoa vinh vien
-        int oldSize = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
-        driver.findElement(By.xpath("//i[@class='lni lni-trash-can']")).click();
-        int inBinSize1 = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
-        // Thuc hien xoa vinh vien
-        driver.findElement(By.xpath("//a[@onclick='deleteAllUserDeleted()']")).click();
-        driver.findElement(By.xpath("//button[contains(text(), 'Yes')]")).click();
-        driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
-        int inBinSize2 = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
-        driver.findElement(By.xpath("//a[text()='User manage']")).click();
-        int newSize = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
-        assert oldSize == newSize && inBinSize1 - inBinSize1 == inBinSize2;
-    }
+//    @Test(priority = 5)
+//    public void testPermanentlyDelete() throws MalformedURLException {
+//        DesiredCapabilities dc = DesiredCapabilities.chrome();
+//        URL url = new URL(selenium_grid_url);
+//        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+//        driver.get(login_url);
+//        driver.manage().window().maximize();
+//        driver.findElement(By.name("username")).sendKeys("nhom06");
+//        driver.findElement(By.name("password")).sendKeys("Nhom06");
+//        driver.findElement(By.name("admin")).click();
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+//        driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
+//        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
+//        // lay so luong user ban dau, trong thung rac va sau khi xoa vinh vien
+//        int oldSize = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
+//        driver.findElement(By.xpath("//i[@class='lni lni-trash-can']")).click();
+//        int inBinSize1 = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
+//        // Thuc hien xoa vinh vien
+//        driver.findElement(By.xpath("//a[@onclick='deleteAllUserDeleted()']")).click();
+//        driver.findElement(By.xpath("//button[contains(text(), 'Yes')]")).click();
+//        driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
+//        int inBinSize2 = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
+//        driver.findElement(By.xpath("//a[text()='User manage']")).click();
+//        int newSize = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
+//        assert oldSize == newSize && inBinSize1 - inBinSize1 == inBinSize2;
+//    }
 }

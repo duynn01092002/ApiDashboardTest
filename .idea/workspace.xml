@@ -7,6 +7,7 @@
     <list default="true" id="a7d64552-8b60-4929-a7ea-36509d05f9de" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/signup_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/signup_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/user_manage_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user_manage_test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +56,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.signup_test.TestSignUpDuplicateEmail">
-    <configuration name="signup_test.TestSignUpDuplicateEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.login_test.testAccessDenied">
+    <configuration name="login_test.testAccessDenied" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="signup_test" />
-      <option name="METHOD_NAME" value="TestSignUpDuplicateEmail" />
+      <option name="MAIN_CLASS_NAME" value="login_test" />
+      <option name="METHOD_NAME" value="testAccessDenied" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -68,11 +69,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="signup_test.TestSignUpLowerAlphabetPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="login_test.testInvalidCredential" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="signup_test" />
-      <option name="METHOD_NAME" value="TestSignUpLowerAlphabetPassword" />
+      <option name="MAIN_CLASS_NAME" value="login_test" />
+      <option name="METHOD_NAME" value="testInvalidCredential" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -80,11 +81,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="signup_test.TestSignUpNumberPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="login_test.testNoCredentialLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="signup_test" />
-      <option name="METHOD_NAME" value="TestSignUpNumberPassword" />
+      <option name="MAIN_CLASS_NAME" value="login_test" />
+      <option name="METHOD_NAME" value="testNoCredentialLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -92,11 +93,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="signup_test.TestSignUpShortPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="login_test.testRoleIsChecked" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="signup_test" />
-      <option name="METHOD_NAME" value="TestSignUpShortPassword" />
+      <option name="MAIN_CLASS_NAME" value="login_test" />
+      <option name="METHOD_NAME" value="testRoleIsChecked" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -104,11 +105,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="signup_test.TestSignUpUpperAlphabetPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="login_test.testSuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="signup_test" />
-      <option name="METHOD_NAME" value="TestSignUpUpperAlphabetPassword" />
+      <option name="MAIN_CLASS_NAME" value="login_test" />
+      <option name="METHOD_NAME" value="testSuccessfulLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -118,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.signup_test.TestSignUpDuplicateEmail" />
-        <item itemvalue="TestNG.signup_test.TestSignUpNumberPassword" />
-        <item itemvalue="TestNG.signup_test.TestSignUpLowerAlphabetPassword" />
-        <item itemvalue="TestNG.signup_test.TestSignUpUpperAlphabetPassword" />
-        <item itemvalue="TestNG.signup_test.TestSignUpShortPassword" />
+        <item itemvalue="TestNG.login_test.testAccessDenied" />
+        <item itemvalue="TestNG.login_test.testInvalidCredential" />
+        <item itemvalue="TestNG.login_test.testRoleIsChecked" />
+        <item itemvalue="TestNG.login_test.testNoCredentialLogin" />
+        <item itemvalue="TestNG.login_test.testSuccessfulLogin" />
       </list>
     </recent_temporary>
   </component>

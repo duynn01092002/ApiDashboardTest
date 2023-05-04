@@ -36,7 +36,7 @@ public class signup_test {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         driver.findElement(By.name("email")).sendKeys("nhom06@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-normal")).click();
+        driver.findElement(By.id("radio-admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.quit();
     }
