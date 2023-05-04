@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7d64552-8b60-4929-a7ea-36509d05f9de" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/src/test/java/data_from_api_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data_from_api_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/signup_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/signup_test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,48 +55,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.signup_test.TestSignUpShortPassword1">
-    <configuration name="api_test.testGetDataFail" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="api_test" />
-      <option name="METHOD_NAME" value="testGetDataFail" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="api_test.testInvalidTokenGetData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="api_test" />
-      <option name="METHOD_NAME" value="testInvalidTokenGetData" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="api_test.testNoTokenGetData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="api_test" />
-      <option name="METHOD_NAME" value="testNoTokenGetData" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="signup_test.TestSignUpShortPassword1" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.signup_test.TestSignUpDuplicateEmail">
+    <configuration name="signup_test.TestSignUpDuplicateEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="signup_test" />
-      <option name="METHOD_NAME" value="TestSignUpShortPassword1" />
+      <option name="METHOD_NAME" value="TestSignUpDuplicateEmail" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -104,11 +68,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="signup_test.TestSignUpSuccess" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="signup_test.TestSignUpLowerAlphabetPassword" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="signup_test" />
-      <option name="METHOD_NAME" value="TestSignUpSuccess" />
+      <option name="METHOD_NAME" value="TestSignUpLowerAlphabetPassword" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signup_test.TestSignUpNumberPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signup_test" />
+      <option name="METHOD_NAME" value="TestSignUpNumberPassword" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signup_test.TestSignUpShortPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signup_test" />
+      <option name="METHOD_NAME" value="TestSignUpShortPassword" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signup_test.TestSignUpUpperAlphabetPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signup_test" />
+      <option name="METHOD_NAME" value="TestSignUpUpperAlphabetPassword" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -118,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.signup_test.TestSignUpShortPassword1" />
-        <item itemvalue="TestNG.signup_test.TestSignUpSuccess" />
-        <item itemvalue="TestNG.api_test.testInvalidTokenGetData" />
-        <item itemvalue="TestNG.api_test.testNoTokenGetData" />
-        <item itemvalue="TestNG.api_test.testGetDataFail" />
+        <item itemvalue="TestNG.signup_test.TestSignUpDuplicateEmail" />
+        <item itemvalue="TestNG.signup_test.TestSignUpNumberPassword" />
+        <item itemvalue="TestNG.signup_test.TestSignUpLowerAlphabetPassword" />
+        <item itemvalue="TestNG.signup_test.TestSignUpUpperAlphabetPassword" />
+        <item itemvalue="TestNG.signup_test.TestSignUpShortPassword" />
       </list>
     </recent_temporary>
   </component>
