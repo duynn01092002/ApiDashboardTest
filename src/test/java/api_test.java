@@ -32,4 +32,44 @@ public class api_test {
         String responseBody = response.getBody().asString();
         assert statusCode == 200 && responseBody != null;
     }
+
+    @Test(priority = 3)
+    public void testGetTokenFail() {
+        String clientId = "";
+        String clientSecret = "RimknsnMuXAzi6gzWqinaUyLMgS95tbp";
+        String url = "https://cads-api.fpt.vn/fiber-detection/v2/getToken";
+        String payload = String.format("{\"clientId\":\"%s\",\"clientSecret\":\"%s\"}", clientId, clientSecret);
+        Response response = RestAssured.given()
+                .header("Content-Type","application/json")
+                .body(payload)
+                .post(url);
+        JSONObject responseJson = new JSONObject(response.getBody().asString());
+        String error = responseJson.getString("error");
+        assert response.getStatusCode() == 200 && error.equals("invalid_client");
+    }
+
+    @Test(priority = 4)
+    public void testNoTokenGetData() {
+        RestAssured.baseURI = "http://cads-api.fpt.vn/fiber-detection/v2/using_json_inf/2022/12";
+        Response response = RestAssured.given()
+                .when()
+                .get();
+        int statusCode = response.getStatusCode();
+        JSONObject responseJson = new JSONObject(response.getBody().asString());
+        String error = responseJson.getString("error");
+        assert statusCode == 401 && error.equals("invalid_request");
+    }
+
+    @Test(priority = 5)
+    public void testInvalidTokenGetData() {
+        RestAssured.baseURI = "http://cads-api.fpt.vn/fiber-detection/v2/using_json_inf/2022/12";
+        Response response = RestAssured.given()
+                .header("Authorization", "Bearer "+"")
+                .when()
+                .get();
+        int statusCode = response.getStatusCode();
+        JSONObject responseJson = new JSONObject(response.getBody().asString());
+        String error = responseJson.getString("error");
+        assert statusCode == 401 && error.equals("invalid_token");
+    }
 }
