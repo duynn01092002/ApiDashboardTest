@@ -65,14 +65,14 @@ public class data_from_api_test {
             }
         }
     }
-    @Test
+    @Test(priority = 1)
     public void testTopStatusOK() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("ngocduy");
-        driver.findElement(By.name("password")).sendKeys("123Duy");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         List<WebElement> listStatusOK = driver.findElements(By.xpath("//p[contains(text(),'items')]"));
@@ -102,7 +102,7 @@ public class data_from_api_test {
         }
         assert flag == true;
     }
-    @Test
+    @Test(priority = 2)
     public void testTotal_HO() throws MalformedURLException {
         DesiredCapabilities dc = new DesiredCapabilities();
         dc = DesiredCapabilities.chrome();
@@ -124,7 +124,7 @@ public class data_from_api_test {
         System.out.println("Expected Total HO value: " + expectedTotalHO);
         assert expectedTotalHO.equals(actualTotalHO);
     }
-    @Test
+    @Test(priority = 3)
     public void testTotal_children_in_HO() throws MalformedURLException {
         getDataFromAPI();
         DesiredCapabilities dc = new DesiredCapabilities();
@@ -146,7 +146,7 @@ public class data_from_api_test {
         System.out.println("Expected Total Children in HO value: " + expectedChildrenInHO);
         assert expectedChildrenInHO.equals(actualChildrenInHO);
     }
-    @Test
+    @Test(priority = 4)
     public void testTotal_Status_OK() throws MalformedURLException {
         DesiredCapabilities dc = new DesiredCapabilities();
         dc = DesiredCapabilities.chrome();
@@ -168,7 +168,7 @@ public class data_from_api_test {
         System.out.println("Expected Total Status OK value: " + expectedTotalStatusOk);
         assert expectedTotalStatusOk.equals(actualTotalStatusOk);
     }
-    @Test
+    @Test(priority = 5)
     public void testTotal_Status_Fail() throws MalformedURLException {
         DesiredCapabilities dc = new DesiredCapabilities();
         dc = DesiredCapabilities.chrome();
