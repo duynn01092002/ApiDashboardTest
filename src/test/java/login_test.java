@@ -13,19 +13,20 @@ public class login_test {
     private final String selenium_grid_url = dotenv.get("SELENIUM_GRID_URL");
     private final String home_url = dotenv.get("HOME_URL");
     private final String login_url = dotenv.get("LOGIN_URL");
-//    @Test(priority = 1)
-//    public void testSuccessfulLogin() throws InterruptedException, MalformedURLException {
-//        DesiredCapabilities dc = DesiredCapabilities.chrome();
-//        URL url = new URL(selenium_grid_url);
-//        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
-//        driver.get(login_url);
-//        driver.findElement(By.name("username")).sendKeys("test2");
-//        driver.findElement(By.name("password")).sendKeys("Test123");
-//        driver.findElement(By.name("user")).click();
-//        driver.findElement(By.xpath("//button[@type='submit']")).click();
-//        assert driver.getCurrentUrl().equals(home_url);
-//        driver.quit();
-//    }
+    @Test(priority = 1)
+    public void testSuccessfulLogin() throws InterruptedException, MalformedURLException {
+        DesiredCapabilities dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.manage().window().maximize();
+        driver.get(login_url);
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
+        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        assert driver.getCurrentUrl().equals(home_url);
+        driver.quit();
+    }
 
     @Test(priority = 2)
     public void testNoCredentialLogin() throws MalformedURLException {
