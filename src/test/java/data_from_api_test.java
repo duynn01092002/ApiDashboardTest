@@ -110,18 +110,16 @@ public class data_from_api_test {
 
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("duan");
-        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         List<WebElement> totalHOWeb = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
         String totalHOText = totalHOWeb.get(0).getText(); // lấy giá trị text của thẻ h3
         String[] totalHOArray = totalHOText.split(" "); // tách chuỗi bằng dấu cách
         String actualTotalHO = totalHOArray[0]; // lấy giá trị số (1287) totalHO
-        System.out.println("Actual Total HO value: " + actualTotalHO);
         JSONObject responeJson = getData();
         String expectedTotalHO  = String.valueOf(responeJson.length());
-        System.out.println("Expected Total HO value: " + expectedTotalHO);
         assert expectedTotalHO.equals(actualTotalHO);
     }
     @Test(priority = 3)
@@ -133,17 +131,15 @@ public class data_from_api_test {
 
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("duan");
-        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         List<WebElement> webElements = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
         String totalChildrenInHOText = webElements.get(1).getText(); // lấy giá trị text của thẻ h3
         String[] totalChildrenInHOArray = totalChildrenInHOText.split(" "); // tách chuỗi bằng dấu cách
         String actualChildrenInHO = totalChildrenInHOArray[0]; // lấy giá trị số Total Children in HO
-        System.out.println("Actual Total Children in HO value: " + actualChildrenInHO);
         String expectedChildrenInHO = String.valueOf(totalItemInHO);
-        System.out.println("Expected Total Children in HO value: " + expectedChildrenInHO);
         assert expectedChildrenInHO.equals(actualChildrenInHO);
     }
     @Test(priority = 4)
@@ -154,18 +150,16 @@ public class data_from_api_test {
 
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("duan");
-        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         List<WebElement> webElements = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
         String totalStatusOkText = webElements.get(2).getText(); // lấy giá trị text của thẻ h3
         String[] totalStatusOkArray = totalStatusOkText.split(" "); // tách chuỗi bằng dấu cách
         String actualTotalStatusOk = totalStatusOkArray[0]; // lấy giá trị số Total Status OK
-        System.out.println("Actual Total Status OK value: " + actualTotalStatusOk);
         getDataFromAPI();
         String expectedTotalStatusOk = String.valueOf(totalStatusOK);
-        System.out.println("Expected Total Status OK value: " + expectedTotalStatusOk);
         assert expectedTotalStatusOk.equals(actualTotalStatusOk);
     }
     @Test(priority = 5)
@@ -176,18 +170,16 @@ public class data_from_api_test {
 
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("duan");
-        driver.findElement(By.name("password")).sendKeys("Duan123");
+        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("password")).sendKeys("Nhom06");
         driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         List<WebElement> webElements = driver.findElements(By.xpath("//h3[@class='text-bold mb-10']"));
         String totalStatusFailText = webElements.get(3).getText(); // lấy giá trị text của thẻ h3
         String[] totalStatusFailArray = totalStatusFailText.split(" "); // tách chuỗi bằng dấu cách
         String actualTotalStatusFail = totalStatusFailArray[0]; // lấy giá trị số Total Status Fail
-        System.out.println("Actual Total Status Fail value: " + actualTotalStatusFail);
         getDataFromAPI();
         String expectedTotalStatusFail = String.valueOf(totalStatusFail);
-        System.out.println("Expected Total Status Fail value: " + expectedTotalStatusFail);
         assert expectedTotalStatusFail.equals(actualTotalStatusFail);
     }
 }
