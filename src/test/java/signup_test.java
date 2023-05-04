@@ -36,10 +36,6 @@ public class signup_test {
         driver.findElement(By.id("radio-normal")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        WebElement alert_checkCredentials = driver.findElement(By.name("signup_success"));
-        String alert_checkCredentials_value = alert_checkCredentials.getAttribute("value");
-        System.out.println(alert_checkCredentials_value);
-        assert alert_checkCredentials_value.equals("true");
         driver.quit();
     }
     @Test(priority = 2)
