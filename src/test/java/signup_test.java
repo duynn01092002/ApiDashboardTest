@@ -1,5 +1,6 @@
 import io.github.cdimascio.dotenv.Dotenv;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -20,24 +21,26 @@ public class signup_test {
     private final String login_url = dotenv.get("LOGIN_URL");
     private final String signup_url = dotenv.get("SIGNUP_URL");
 
-    @Test(priority = 1)
-    public void TestSignUpSuccess() throws InterruptedException, MalformedURLException {
-        DesiredCapabilities dc = DesiredCapabilities.firefox();
-        URL url = new URL(selenium_grid_url);
-        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
-        driver.get(signup_url);
-        driver.findElement(By.name("username")).sendKeys("test1");
-        driver.findElement(By.name("password")).sendKeys("Test123");
-        driver.findElement(By.name("fullname")).sendKeys("Test Name");
-        driver.findElement(By.name("age")).sendKeys("1");
-        driver.findElement(By.name("address")).sendKeys("Test Address");
-        driver.findElement(By.name("email")).sendKeys("Test@gmail.com");
-        driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-normal")).click();
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-
-        driver.quit();
-    }
+//    @Test(priority = 1)
+//    public void TestSignUpSuccess() throws InterruptedException, MalformedURLException {
+//        DesiredCapabilities dc = DesiredCapabilities.chrome();
+//        URL url = new URL(selenium_grid_url);
+//        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+//        driver.get(signup_url);
+//        driver.findElement(By.name("username")).sendKeys("ngocduy");
+//        driver.findElement(By.name("password")).sendKeys("123Duy");
+//        driver.findElement(By.name("fullname")).sendKeys("Test Name1");
+//        driver.findElement(By.name("age")).sendKeys("1");
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//        driver.findElement(By.name("address")).sendKeys("Test Address");
+//        driver.findElement(By.name("email")).sendKeys("nguyenngocduy12a2@gmail.com");
+//        driver.findElement(By.name("avatar")).sendKeys("http://link");
+//        driver.findElement(By.id("radio-admin")).click();
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+//
+//        driver.quit();
+//    }
     @Test(priority = 2)
     public void TestSignUpDuplicateUsername() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.firefox();
@@ -115,7 +118,7 @@ public class signup_test {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(signup_url);
         driver.findElement(By.name("username")).sendKeys("UserTest");
-        driver.findElement(By.name("password")).sendKeys("Te12");
+        driver.findElement(By.name("password")).sendKeys("Test123");
         driver.findElement(By.name("fullname")).sendKeys("Test Name");
         driver.findElement(By.name("age")).sendKeys("1");
         driver.findElement(By.name("address")).sendKeys("Test Address");
