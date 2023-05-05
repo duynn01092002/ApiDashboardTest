@@ -34,7 +34,7 @@ public class user_manage_test {
         for (WebElement element : elementEmailList) {
             stringEmailList.add(element.getText());
         }
-        assert stringEmailList.contains("nhom06gmail.com");
+        assert stringEmailList.contains("nhom06@gmail.com");
         driver.quit();
     }
 

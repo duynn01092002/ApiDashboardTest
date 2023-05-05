@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7d64552-8b60-4929-a7ea-36509d05f9de" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/user_manage_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user_manage_test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,12 +56,45 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.login_test.testAccessDenied">
-    <configuration name="login_test.testAccessDenied" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.signup_test.testEmptyInput">
+    <configuration name="data_from_api_test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="data_from_api_test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="login_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="login_test" />
-      <option name="METHOD_NAME" value="testAccessDenied" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signup_test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signup_test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signup_test.testEmptyInput" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signup_test" />
+      <option name="METHOD_NAME" value="testEmptyInput" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -67,48 +102,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="login_test.testInvalidCredential" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="user_manage_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="login_test" />
-      <option name="METHOD_NAME" value="testInvalidCredential" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="login_test.testNoCredentialLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="login_test" />
-      <option name="METHOD_NAME" value="testNoCredentialLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="login_test.testRoleIsChecked" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="login_test" />
-      <option name="METHOD_NAME" value="testRoleIsChecked" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="login_test.testSuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="login_test" />
-      <option name="METHOD_NAME" value="testSuccessfulLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="user_manage_test" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -117,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.login_test.testAccessDenied" />
-        <item itemvalue="TestNG.login_test.testInvalidCredential" />
-        <item itemvalue="TestNG.login_test.testRoleIsChecked" />
-        <item itemvalue="TestNG.login_test.testNoCredentialLogin" />
-        <item itemvalue="TestNG.login_test.testSuccessfulLogin" />
+        <item itemvalue="TestNG.signup_test.testEmptyInput" />
+        <item itemvalue="TestNG.user_manage_test" />
+        <item itemvalue="TestNG.data_from_api_test" />
+        <item itemvalue="TestNG.login_test" />
+        <item itemvalue="TestNG.signup_test" />
       </list>
     </recent_temporary>
   </component>
@@ -146,6 +144,8 @@
       <workItem from="1683083589872" duration="10153000" />
       <workItem from="1683164821432" duration="1832000" />
       <workItem from="1683193109599" duration="5128000" />
+      <workItem from="1683224911129" duration="207000" />
+      <workItem from="1683264582348" duration="1495000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1682948306113</created>

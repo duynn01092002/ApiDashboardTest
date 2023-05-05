@@ -202,4 +202,32 @@ public class signup_test {
         assert alert_text.equals("Email đã được sử dụng");
         driver.quit();
     }
+
+    @Test(priority = 14)
+    public void testEmptyInput() throws MalformedURLException {
+        DesiredCapabilities dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get(signup_url);
+        driver.findElement(By.name("username")).sendKeys("");
+        driver.findElement(By.name("password")).sendKeys("");
+        driver.findElement(By.name("fullname")).sendKeys("");
+        driver.findElement(By.name("age")).sendKeys("");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        driver.findElement(By.name("address")).sendKeys("");
+        driver.findElement(By.name("email")).sendKeys("");
+        driver.findElement(By.name("avatar")).sendKeys("");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        WebElement errorMsg1 = driver.findElement(By.xpath("//span[@id='errorMsg1']"));
+        WebElement errorMsg2 = driver.findElement(By.xpath("//span[@id='errorMsg2']"));
+        WebElement errorMsg3 = driver.findElement(By.xpath("//span[@id='errorMsg3']"));
+        WebElement errorMsg4 = driver.findElement(By.xpath("//span[@id='errorMsg4']"));
+        WebElement errorMsg5 = driver.findElement(By.xpath("//span[@id='errorMsg5']"));
+        WebElement errorMsg6 = driver.findElement(By.xpath("//span[@id='errorMsg6']"));
+        WebElement errorMsg7 = driver.findElement(By.xpath("//span[@id='errorMsg7']"));
+        assert errorMsg1.getText().contains("tên đăng nhập") && errorMsg2.getText().contains("mật khẩu") &&
+                errorMsg3.getText().contains("tên") && errorMsg4.getText().contains("tuổi") && errorMsg5.getText().contains("địa chỉ")
+                && errorMsg6.getText().contains("email") && errorMsg7.getText().contains("images");
+    }
 }
