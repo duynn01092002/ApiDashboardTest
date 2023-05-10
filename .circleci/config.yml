@@ -21,7 +21,7 @@ jobs:
           command: |
             git clone https://github.com/duynn01092002/ApiDashboardTest
             cd ApiDashboardTest
-            maven clean install -DskipTests
+            mvn clean install -DskipTests
             ls ./target
 workflows:
   build_pipeline:
