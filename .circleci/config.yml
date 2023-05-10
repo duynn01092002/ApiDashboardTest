@@ -1,0 +1,29 @@
+version: 2.1
+
+commands:
+  install_java_package:
+    steps:
+      - run:
+          name: Cài đặt java package
+          command: |
+            sudo apt-get update
+            sudo apt-get install maven openjdk-17-jdk git -y
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2023.03
+    steps:
+      - checkout
+      - install_java_package
+      - run:
+          name: "Build API Dashboard Test"
+          command: |
+            git clone https://github.com/duynn01092002/ApiDashboardTest
+            cd ApiDashboardTest
+            maven clean install -DskipTests
+            ls ./target
+workflows:
+  build_pipeline:
+    jobs:
+      - build
