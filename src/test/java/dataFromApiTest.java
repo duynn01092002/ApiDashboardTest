@@ -1,14 +1,12 @@
 import io.github.cdimascio.dotenv.Dotenv;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
-import org.testng.reporters.XMLConstants;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -16,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class data_from_api_test {
+public class dataFromApiTest {
     private final Dotenv dotenv = Dotenv.load();
     private final String selenium_grid_url = dotenv.get("SELENIUM_GRID_URL");
     private final String home_url = dotenv.get("HOME_URL");

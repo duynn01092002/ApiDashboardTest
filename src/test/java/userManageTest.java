@@ -10,7 +10,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class user_manage_test {
+public class userManageTest {
     private final Dotenv dotenv = Dotenv.load();
     private final String selenium_grid_url = dotenv.get("SELENIUM_GRID_URL");
     private final String home_url = dotenv.get("HOME_URL");

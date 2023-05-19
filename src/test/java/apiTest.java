@@ -4,7 +4,7 @@ import org.json.JSONObject;
 
 import org.testng.annotations.Test;
 
-public class api_test {
+public class apiTest {
     private String token;
     @Test(priority = 1)
     public void testGetToken() {

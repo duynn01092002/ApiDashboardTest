@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <test name="Test" preserve-order="true">
+        <classes>
+            <!-- Cấu hình thứ tự chạy của các lớp kiểm thử -->
+            <class name="apiTest"/>
+            <class name="signupTest"/>
+            <class name="loginTest"/>
+            <class name="userManageTest"/>
+            <class name="profileTest"/>
+            <class name="dataFromApiTest"/>
+            <class name="chartTest"/>
+        </classes>
+    </test>
+</suite>

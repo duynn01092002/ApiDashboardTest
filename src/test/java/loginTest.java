@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class login_test {
+public class loginTest {
     private final Dotenv dotenv = Dotenv.load();
     private final String selenium_grid_url = dotenv.get("SELENIUM_GRID_URL");
     private final String home_url = dotenv.get("HOME_URL");
