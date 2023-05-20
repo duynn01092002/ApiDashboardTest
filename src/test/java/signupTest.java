@@ -34,7 +34,6 @@ public class signupTest {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         driver.findElement(By.name("email")).sendKeys("nhom06@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.quit();
     }
@@ -54,9 +53,7 @@ public class signupTest {
         driver.findElement(By.name("address")).sendKeys("Test Address");
         driver.findElement(By.name("email")).sendKeys("Test123@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-normal")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-
         WebDriverWait wait = new WebDriverWait(driver, 10);
         By alertLocator = By.xpath("//div[@class='alert alert-danger']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertLocator));
@@ -81,7 +78,6 @@ public class signupTest {
         driver.findElement(By.name("address")).sendKeys("Test Address");
         driver.findElement(By.name("email")).sendKeys("Email@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-normal")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -108,7 +104,6 @@ public class signupTest {
         driver.findElement(By.name("address")).sendKeys("Test Address");
         driver.findElement(By.name("email")).sendKeys("Email@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-normal")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -135,7 +130,6 @@ public class signupTest {
         driver.findElement(By.name("address")).sendKeys("Test Address");
         driver.findElement(By.name("email")).sendKeys("Email@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-normal")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -162,7 +156,6 @@ public class signupTest {
         driver.findElement(By.name("address")).sendKeys("Test Address");
         driver.findElement(By.name("email")).sendKeys("Email@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.xpath("//input[@id='radio-normal']")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -189,7 +182,6 @@ public class signupTest {
         driver.findElement(By.name("address")).sendKeys("Test Address");
         driver.findElement(By.name("email")).sendKeys("nhom06@gmail.com");
         driver.findElement(By.name("avatar")).sendKeys("http://link");
-        driver.findElement(By.id("radio-normal")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
