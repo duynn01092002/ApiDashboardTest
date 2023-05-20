@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a7d64552-8b60-4929-a7ea-36509d05f9de" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/overviewDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/overviewDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/profileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/profileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/signupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/signupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/userManageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,43 +61,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.chartTest.chart5Test">
-    <configuration name="chartTest.TestData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="chartTest" />
-      <option name="METHOD_NAME" value="TestData" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="chartTest.chart1Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="chartTest" />
-      <option name="METHOD_NAME" value="chart1Test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="chartTest.chart4Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="chartTest" />
-      <option name="METHOD_NAME" value="chart4Test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.signupTest.testEmptyInput">
     <configuration name="chartTest.chart5Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -120,11 +86,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="userManageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="signupTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signupTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signupTest.TestSignUpDuplicateUsername" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signupTest" />
+      <option name="METHOD_NAME" value="TestSignUpDuplicateUsername" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signupTest.testEmptyInput" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="signupTest" />
+      <option name="METHOD_NAME" value="testEmptyInput" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="userManageTest.testUpdateUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="userManageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="testUpdateUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -133,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.signupTest.testEmptyInput" />
+        <item itemvalue="TestNG.signupTest" />
+        <item itemvalue="TestNG.signupTest.TestSignUpDuplicateUsername" />
         <item itemvalue="TestNG.chartTest.chart5Test" />
-        <item itemvalue="TestNG.chartTest.TestData" />
-        <item itemvalue="TestNG.chartTest.chart4Test" />
-        <item itemvalue="TestNG.chartTest.chart1Test" />
-        <item itemvalue="TestNG.userManageTest" />
+        <item itemvalue="TestNG.userManageTest.testUpdateUser" />
       </list>
     </recent_temporary>
   </component>

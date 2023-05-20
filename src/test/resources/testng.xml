@@ -6,8 +6,8 @@
             <class name="apiTest"/>
             <class name="signupTest"/>
             <class name="loginTest"/>
-            <class name="userManageTest"/>
             <class name="profileTest"/>
+            <class name="userManageTest"/>
             <class name="overviewDataTest"/>
             <class name="chartTest"/>
         </classes>

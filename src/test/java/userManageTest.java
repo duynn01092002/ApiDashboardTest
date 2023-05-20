@@ -95,7 +95,7 @@ public class userManageTest {
         }
         driver.findElement(By.xpath("//button[@class='text-danger'][@data-userid="+pos+"]")).click();
         driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
-        driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
+        driver.findElement(By.xpath("//button[text()='OK']")).click();
         oldSize -= 1;
         List<WebElement> newElementEmailList = driver.findElements(By.xpath("//p//a[@href='#0']"));
         int newSize = newElementEmailList.size();

@@ -59,11 +59,11 @@ public class signupTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertLocator));
         WebElement alert_checkCredentials = driver.findElement(alertLocator);
         String alert_text = alert_checkCredentials.getText();
-        assert alert_text.equals("Username đã tồn tại");
         driver.quit();
+        assert alert_text.equals("Username đã tồn tại");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 3)
     public void TestSignUpShortPassword() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
@@ -85,11 +85,11 @@ public class signupTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertLocator));
         WebElement alert_checkCredentials = driver.findElement(alertLocator);
         String alert_text = alert_checkCredentials.getText();
-        assert alert_text.equals("Mật khẩu phải từ 6 đến 20 ký tự");
         driver.quit();
+        assert alert_text.equals("Mật khẩu phải từ 6 đến 20 ký tự");
     }
 
-    @Test(priority = 6)
+    @Test(priority = 4)
     public void TestSignUpUpperAlphabetPassword() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
@@ -111,11 +111,11 @@ public class signupTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertLocator));
         WebElement alert_checkCredentials = driver.findElement(alertLocator);
         String alert_text = alert_checkCredentials.getText();
-        assert alert_text.equals("Mật khẩu phải chứa ít nhất một chữ hoa");
         driver.quit();
+        assert alert_text.equals("Mật khẩu phải chứa ít nhất một chữ hoa");
     }
 
-    @Test(priority = 7)
+    @Test(priority = 5)
     public void TestSignUpLowerAlphabetPassword() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
@@ -137,11 +137,11 @@ public class signupTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertLocator));
         WebElement alert_checkCredentials = driver.findElement(alertLocator);
         String alert_text = alert_checkCredentials.getText();
-        assert alert_text.equals("Mật khẩu phải chứa ít nhất một chữ thường");
         driver.quit();
+        assert alert_text.equals("Mật khẩu phải chứa ít nhất một chữ thường");
     }
 
-    @Test(priority = 8)
+    @Test(priority = 6)
     public void TestSignUpNumberPassword() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
@@ -163,11 +163,11 @@ public class signupTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertLocator));
         WebElement alert_checkCredentials = driver.findElement(alertLocator);
         String alert_text = alert_checkCredentials.getText();
-        assert alert_text.equals("Mật khẩu phải chứa ít nhất một số");
         driver.quit();
+        assert alert_text.equals("Mật khẩu phải chứa ít nhất một số");
     }
 
-    @Test(priority = 13)
+    @Test(priority = 7)
     public void TestSignUpDuplicateEmail() throws InterruptedException, MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
@@ -189,11 +189,11 @@ public class signupTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertLocator));
         WebElement alert_checkCredentials = driver.findElement(alertLocator);
         String alert_text = alert_checkCredentials.getText();
-        assert alert_text.equals("Email đã được sử dụng");
         driver.quit();
+        assert alert_text.equals("Email đã được sử dụng");
     }
 
-    @Test(priority = 14)
+    @Test(priority = 8)
     public void testEmptyInput() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
@@ -208,7 +208,7 @@ public class signupTest {
         driver.findElement(By.name("address")).sendKeys("");
         driver.findElement(By.name("email")).sendKeys("");
         driver.findElement(By.name("avatar")).sendKeys("");
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.name("email")).sendKeys("");
         WebElement errorMsg1 = driver.findElement(By.xpath("//span[@id='errorMsg1']"));
         WebElement errorMsg2 = driver.findElement(By.xpath("//span[@id='errorMsg2']"));
         WebElement errorMsg3 = driver.findElement(By.xpath("//span[@id='errorMsg3']"));
@@ -219,5 +219,6 @@ public class signupTest {
         assert errorMsg1.getText().contains("tên đăng nhập") && errorMsg2.getText().contains("mật khẩu") &&
                 errorMsg3.getText().contains("tên") && errorMsg4.getText().contains("tuổi") && errorMsg5.getText().contains("địa chỉ")
                 && errorMsg6.getText().contains("email") && errorMsg7.getText().contains("images");
+        driver.quit();
     }
 }

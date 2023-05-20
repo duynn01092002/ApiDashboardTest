@@ -23,7 +23,7 @@ public class profileTest {
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-        driver.findElement(By.xpath("//img[@src='/static/images/profile/profile-image.png']")).click();
+        driver.findElement(By.xpath("//img[@src='https://www.clipartmax.com/png/middle/319-3191274_male-avatar-admin-profile.png']")).click();
         driver.findElement(By.xpath("//a[@href='/profile']")).click();
 
         assert driver.getCurrentUrl().equals(profile_url);

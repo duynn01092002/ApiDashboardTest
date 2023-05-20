@@ -201,6 +201,8 @@ public class chartTest {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         String data = ((JavascriptExecutor) driver).executeScript("return getDataForChart1AndChart2();").toString();
+        driver.quit();
+
         String[] parts = data.split(", ");
 
         List<String> refDates = getRefValuesForChart1();
@@ -218,8 +220,6 @@ public class chartTest {
                 flag2 = true;
         }
         assert flag1 && flag2;
-
-        driver.quit();
     }
 
     @Test(priority = 2)
@@ -233,13 +233,11 @@ public class chartTest {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         String data = ((JavascriptExecutor) driver).executeScript("return getDataForChart4();").toString();
-
+        driver.quit();
         Map<String, Integer> standardValue = formatChart4Data(data);
         Map<String, Integer> refValue = getRefValueForChart4();
 
         assert standardValue.equals(refValue);
-
-        driver.quit();
     }
 
     @Test(priority = 3)
@@ -253,9 +251,10 @@ public class chartTest {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         String data = ((JavascriptExecutor) driver).executeScript("return getDataForChart5();").toString();
+        driver.quit();
+
         Map<Double, Integer> standardValue = formatChart5Data(data);
         Map<Double, Integer> refValue = getRefValueForChart5();
         assert standardValue.equals(refValue);
-        driver.quit();
     }
 }

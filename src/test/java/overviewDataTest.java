@@ -81,6 +81,7 @@ public class overviewDataTest {
         JSONObject responeJson = getData();
         String expectedTotalHO  = String.valueOf(responeJson.length());
         assert expectedTotalHO.equals(actualTotalHO);
+        driver.quit();
     }
     @Test(priority = 2)
     public void testTotal_children_in_HO() throws MalformedURLException {
@@ -100,6 +101,7 @@ public class overviewDataTest {
         String actualChildrenInHO = totalChildrenInHOArray[0]; // lấy giá trị số Total Children in HO
         String expectedChildrenInHO = String.valueOf(totalItemInHO);
         assert expectedChildrenInHO.equals(actualChildrenInHO);
+        driver.quit();
     }
     @Test(priority = 3)
     public void testTotal_Status_OK() throws MalformedURLException {
@@ -119,6 +121,7 @@ public class overviewDataTest {
         getDataFromAPI();
         String expectedTotalStatusOk = String.valueOf(totalStatusOK);
         assert expectedTotalStatusOk.equals(actualTotalStatusOk);
+        driver.quit();
     }
     @Test(priority = 4)
     public void testTotal_Status_Fail() throws MalformedURLException {
@@ -138,5 +141,6 @@ public class overviewDataTest {
         getDataFromAPI();
         String expectedTotalStatusFail = String.valueOf(totalStatusFail);
         assert expectedTotalStatusFail.equals(actualTotalStatusFail);
+        driver.quit();
     }
 }
