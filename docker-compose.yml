@@ -1,5 +1,9 @@
 version: '3'
 services:
+  project:
+    build:
+      context: .
+      dockerfile: Dockerfile
   selenium-hub:
     image: selenium/hub:4.1.1
     container_name: selenium-hub

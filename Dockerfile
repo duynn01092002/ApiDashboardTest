@@ -4,4 +4,4 @@ COPY . /usr/local/service
 WORKDIR /usr/local/service
 
 
-CMD ["mvn", "clean","package"]
+CMD ["mvn", "clean","install","-DskipTests"]
