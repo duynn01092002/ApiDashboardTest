@@ -23,18 +23,17 @@ public class userManageTest {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
         driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
-        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
+        driver.findElement(By.xpath("//a[@href='/admin/user-manage/']")).click();
         List<WebElement> elementEmailList = driver.findElements(By.xpath("//p//a[@href='#0']"));
         List<String> stringEmailList = new ArrayList<>();
         for (WebElement element : elementEmailList) {
             stringEmailList.add(element.getText());
         }
-        assert stringEmailList.contains("nhom06@gmail.com");
+        assert stringEmailList.contains("admin@gmail.com");
         driver.quit();
     }
 
@@ -45,12 +44,11 @@ public class userManageTest {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
         driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
-        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
+        driver.findElement(By.xpath("//a[@href='/admin/user-manage/']")).click();
         List<WebElement> elementEmailList = driver.findElements(By.xpath("//p//a[@href='#0']"));
         List<String> stringEmailList = new ArrayList<>();
         for (WebElement element : elementEmailList) {
@@ -78,12 +76,11 @@ public class userManageTest {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
         driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
-        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
+        driver.findElement(By.xpath("//a[@href='/admin/user-manage/']")).click();
         List<WebElement> elementEmailList = driver.findElements(By.xpath("//p//a[@href='#0']"));
         int oldSize = elementEmailList.size();
         List<String> stringEmailList = new ArrayList<>();
@@ -92,7 +89,7 @@ public class userManageTest {
         }
         int pos = 0;
         for (int i = 0;i < stringEmailList.size();i++) {
-            if (stringEmailList.get(i).equals("admin@gmail.com")) {
+            if (stringEmailList.get(i).equals("nhom06@gmail.com")) {
                 pos = i + 1;
             }
         }
@@ -114,12 +111,11 @@ public class userManageTest {
         driver.get(login_url);
         driver.manage().window().maximize();
         // Dang nhap va chuyen huong de trang quan ly nguoi dung
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
-        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
+        driver.findElement(By.xpath("//a[@href='/admin/user-manage/']")).click();
         // Lay so luong user ban dau, trong thung rac va sau khi khoi phuc
         int oldSize = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
         driver.findElement(By.xpath("//i[@class='lni lni-trash-can']")).click();
@@ -141,9 +137,8 @@ public class userManageTest {
 //        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
 //        driver.get(login_url);
 //        driver.manage().window().maximize();
-//        driver.findElement(By.name("username")).sendKeys("nhom06");
-//        driver.findElement(By.name("password")).sendKeys("Nhom06");
-//        driver.findElement(By.name("admin")).click();
+//        driver.findElement(By.name("username")).sendKeys("admin");
+//        driver.findElement(By.name("password")).sendKeys("admin");
 //        driver.findElement(By.xpath("//button[@type='submit']")).click();
 //        driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
 //        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
