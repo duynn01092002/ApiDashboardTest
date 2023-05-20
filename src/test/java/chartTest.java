@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.cdimascio.dotenv.Dotenv;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -118,15 +120,84 @@ public class chartTest {
         return refValue;
     }
 
+    public static Map<Double, Integer> formatChart5Data(String data) {
+        Double standardKey = 0.0;
+        Integer standardCount = 0;
+
+        data = data.replaceAll("[{} ]", "");
+
+        // Tạo một map để lưu trữ kết quả
+        Map<Double, Integer> map = new HashMap<>();
+
+        // Tách chuỗi thành các cặp key-value
+        String[] pairs = data.split(",");
+
+        // Xử lý từng cặp key-value
+        for (String pair : pairs) {
+            // Tách key và value
+            String[] keyValue = pair.split("=");
+
+            // Chuyển đổi key và value sang kiểu Double và Integer
+            Double key = Double.parseDouble(keyValue[0]);
+            Integer value = Integer.parseInt(keyValue[1]);
+
+            // Thêm key và value vào map
+            map.put(key, value);
+        }
+        List<Double> keys = new ArrayList<>(map.keySet());
+        standardCount = map.get(keys.get(0));
+        for (int i = 1;i < map.size();i++) {
+            if (standardCount <= map.get(keys.get(i))) {
+                standardCount = map.get(keys.get(i));
+                standardKey = keys.get(i);
+            }
+        }
+        Map<Double, Integer> standardValue = new HashMap<>();
+        standardValue.put(standardKey,standardCount);
+        return standardValue;
+    }
+
+    public static Map<Double, Integer> getRefValueForChart5() {
+        double refKey = 14.2;
+        Integer refCount = 0;
+        JSONObject responseData = getData();
+        for (String key : responseData.keySet()) {
+            JSONObject HO_Item = responseData.getJSONObject(key);
+            for (String item_key : HO_Item.keySet()) {
+                JSONObject item_data = HO_Item.getJSONObject(item_key);
+                JSONArray toProceedResult = item_data.getJSONArray("predict_result");
+                String statusString = item_data.getString("status");
+                List<Double> predictResult = new ArrayList<>();
+                for (int i = 0;i<toProceedResult.length();i++) {
+                    if (statusString.equals("fail")) {
+                        try {
+                            double value = toProceedResult.getDouble(i);
+                            predictResult.add(value);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }
+                for (double result : predictResult) {
+                    if (result == refKey)
+                        refCount++;
+                }
+            }
+        }
+        Map<Double, Integer> refValue = new HashMap<>();
+        refValue.put(refKey,refCount);
+        return refValue;
+    }
+
     @Test(priority = 1)
-    public void viewChart1() throws MalformedURLException {
+    public void chart1Test() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         String data = ((JavascriptExecutor) driver).executeScript("return getDataForChart1AndChart2();").toString();
@@ -152,14 +223,13 @@ public class chartTest {
     }
 
     @Test(priority = 2)
-    public void ViewChart4() throws MalformedURLException {
+    public void chart4Test() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         String data = ((JavascriptExecutor) driver).executeScript("return getDataForChart4();").toString();
@@ -169,6 +239,23 @@ public class chartTest {
 
         assert standardValue.equals(refValue);
 
+        driver.quit();
+    }
+
+    @Test(priority = 3)
+    public void chart5Test() throws MalformedURLException {
+        DesiredCapabilities dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.get(login_url);
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+        String data = ((JavascriptExecutor) driver).executeScript("return getDataForChart5();").toString();
+        Map<Double, Integer> standardValue = formatChart5Data(data);
+        Map<Double, Integer> refValue = getRefValueForChart5();
+        assert standardValue.equals(refValue);
         driver.quit();
     }
 }
