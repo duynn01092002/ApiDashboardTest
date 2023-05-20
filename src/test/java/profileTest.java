@@ -20,9 +20,8 @@ public class profileTest {
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.manage().window().maximize();
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//img[@src='/static/images/profile/profile-image.png']")).click();
         driver.findElement(By.xpath("//a[@href='/profile']")).click();
