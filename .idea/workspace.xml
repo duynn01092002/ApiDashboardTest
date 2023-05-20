@@ -6,17 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a7d64552-8b60-4929-a7ea-36509d05f9de" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0dbd4b19162641ef7026900c51191b4b9561c53c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49afdd5364909dabae366e070302ff3131e112bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8e09c531424d7533bc21f193e9d697dfbbe55f7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/d/0dbd4b19162641ef7026900c51191b4b9561c53c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/9/49afdd5364909dabae366e070302ff3131e112bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/8/e8e09c531424d7533bc21f193e9d697dfbbe55f7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dataFromApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataFromApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/profileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/profileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/signupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/signupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/userManageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,24 +63,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.loginTest">
+  <component name="RunManager" selected="TestNG.userManageTest">
     <configuration name="chartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="chartTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="chartTest.ViewChart4" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="chartTest" />
-      <option name="METHOD_NAME" value="ViewChart4" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -124,12 +110,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="signupTest.TestSignUpSuccess" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="signupTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="signupTest" />
-      <option name="METHOD_NAME" value="TestSignUpSuccess" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="userManageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="userManageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -138,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.userManageTest" />
+        <item itemvalue="TestNG.signupTest" />
         <item itemvalue="TestNG.loginTest" />
         <item itemvalue="TestNG.loginTest.testNoCredentialLogin" />
         <item itemvalue="TestNG.chartTest" />
-        <item itemvalue="TestNG.signupTest.TestSignUpSuccess" />
-        <item itemvalue="TestNG.chartTest.ViewChart4" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +174,7 @@
       <workItem from="1683805485342" duration="102000" />
       <workItem from="1684404342639" duration="19177000" />
       <workItem from="1684483526873" duration="7164000" />
-      <workItem from="1684572985816" duration="662000" />
+      <workItem from="1684572985816" duration="3490000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1682948306113</created>

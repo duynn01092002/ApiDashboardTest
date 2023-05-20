@@ -8,7 +8,7 @@
             <class name="loginTest"/>
             <class name="userManageTest"/>
             <class name="profileTest"/>
-            <class name="dataFromApiTest"/>
+            <class name="overviewDataTest"/>
             <class name="chartTest"/>
         </classes>
     </test>
