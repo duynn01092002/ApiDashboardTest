@@ -15,15 +15,14 @@ public class loginTest {
     private final String login_url = dotenv.get("LOGIN_URL");
 
     @Test(priority = 1)
-    public void testSuccessfulLogin() throws InterruptedException, MalformedURLException {
+    public void testSuccessfulLogin() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.manage().window().maximize();
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("admin")).click();
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         assert driver.getCurrentUrl().equals(home_url);
         driver.quit();
@@ -39,52 +38,36 @@ public class loginTest {
         driver.findElement(By.name("username")).sendKeys("");
         driver.findElement(By.name("password")).sendKeys("");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-        WebElement alert_message1 = driver.findElement(By.xpath("//span[@id='errorMsg1']"));
-        WebElement alert_message2 = driver.findElement(By.xpath("//span[@id='errorMsg2']"));
-        assert alert_message1.getText().contains("tên đăng nhập") && alert_message2.getText().contains("mật khẩu");
+        String validation_message = driver.findElement(By.name("username")).getAttribute("validationMessage");
+        assert validation_message.contains("Please fill out this field.");
+
         driver.quit();
     }
 
     @Test(priority = 3)
-    public void testRoleIsChecked() throws MalformedURLException {
-        DesiredCapabilities dc = DesiredCapabilities.chrome();
-        URL url = new URL(selenium_grid_url);
-        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
-        driver.manage().window().maximize();
-        driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-        WebElement alert_role_is_checked = driver.findElement(By.xpath("//div[@class='alert alert-danger']"));
-        assert alert_role_is_checked.getText().contains("checkbox Role");
-        driver.quit();
-    }
-    @Test(priority = 4)
     public void testInvalidCredential() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.get(login_url);
         driver.manage().window().maximize();
-        driver.findElement(By.name("username")).sendKeys("nhom06");
+        driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("123D");
-        driver.findElement(By.name("admin")).click();
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         WebElement alert_invalid_credential = driver.findElement(By.xpath("//div[@class='alert alert-danger']"));
         assert alert_invalid_credential.getText().contains("Invalid");
         driver.quit();
     }
 
-    @Test(priority = 5)
+    @Test(priority = 4)
     public void testAccessDenied() throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL(selenium_grid_url);
         RemoteWebDriver driver = new RemoteWebDriver(url,dc);
         driver.manage().window().maximize();
         driver.get(login_url);
-        driver.findElement(By.name("username")).sendKeys("nhom06");
-        driver.findElement(By.name("password")).sendKeys("Nhom06");
-        driver.findElement(By.name("user")).click();
+        driver.findElement(By.name("username")).sendKeys("123");
+        driver.findElement(By.name("password")).sendKeys("123");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         WebElement alert_access_denied = driver.findElement(By.xpath("//div[@class='alert alert-danger']"));
         assert alert_access_denied.getText().contains("Access");
