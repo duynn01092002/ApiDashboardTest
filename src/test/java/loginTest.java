@@ -73,4 +73,20 @@ public class loginTest {
         assert alert_access_denied.getText().contains("Access");
         driver.quit();
     }
+
+    @Test(priority = 5)
+    public void testLogout() throws MalformedURLException {
+        DesiredCapabilities dc = DesiredCapabilities.chrome();
+        URL url = new URL(selenium_grid_url);
+        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver.manage().window().maximize();
+        driver.get(login_url);
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.xpath("//img[@src='https://www.clipartmax.com/png/middle/319-3191274_male-avatar-admin-profile.png']")).click();
+        driver.findElement(By.xpath("//a[text()=' Sign Out ']")).click();
+        assert driver.getCurrentUrl().equals(login_url);
+        driver.quit();
+    }
 }
