@@ -141,7 +141,7 @@ public class userManageTest {
 //        driver.findElement(By.name("password")).sendKeys("admin");
 //        driver.findElement(By.xpath("//button[@type='submit']")).click();
 //        driver.findElement(By.xpath("//a[@class='collapsed']//span[@class='text']")).click();
-//        driver.findElement(By.xpath("//a[@href='/admin/user-manage']")).click();
+//        driver.findElement(By.xpath("//a[@href='/admin/user-manage/']")).click();
 //        // lay so luong user ban dau, trong thung rac va sau khi xoa vinh vien
 //        int oldSize = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
 //        driver.findElement(By.xpath("//i[@class='lni lni-trash-can']")).click();
@@ -154,5 +154,6 @@ public class userManageTest {
 //        driver.findElement(By.xpath("//a[text()='User manage']")).click();
 //        int newSize = driver.findElements(By.xpath("//p//a[@href='#0']")).size();
 //        assert oldSize == newSize && inBinSize1 - inBinSize1 == inBinSize2;
+//        driver.quit();
 //    }
 }

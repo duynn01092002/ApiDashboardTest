@@ -6,6 +6,3 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 D
 .circleci/config.yml,f\d\fd5da61396a8376845bee5cdf71aaf3c98a888ae
-:
-
-Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
