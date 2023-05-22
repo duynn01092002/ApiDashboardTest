@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a7d64552-8b60-4929-a7ea-36509d05f9de" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/overviewDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/overviewDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/profileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/profileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/signupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/signupTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/userManageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +173,7 @@
       <workItem from="1684404342639" duration="19177000" />
       <workItem from="1684483526873" duration="7164000" />
       <workItem from="1684572985816" duration="8181000" />
+      <workItem from="1684744814186" duration="561000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1682948306113</created>
