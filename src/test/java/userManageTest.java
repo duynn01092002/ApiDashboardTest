@@ -64,7 +64,7 @@ public class userManageTest {
         driver.findElement(By.name("fullname")).clear();
         driver.findElement(By.name("fullname")).sendKeys("edited");
         driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
-        driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
+        driver.findElement(By.xpath("//button[text()='OK']")).click();
         assert driver.findElement(By.xpath("//p[contains(text(),'edited')]")) != null;
         driver.quit();
     }

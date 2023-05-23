@@ -10,7 +10,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/userManageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,25 +59,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.loginTest">
-    <configuration name="apiTest.testInvalidTokenGetData" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.userManageTest">
+    <configuration name="chartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="apiTest" />
-      <option name="METHOD_NAME" value="testInvalidTokenGetData" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="apiTest.testNoTokenGetData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiDashboardTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="apiTest" />
-      <option name="METHOD_NAME" value="testNoTokenGetData" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="chartTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -95,12 +82,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="loginTest.testLogout" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="overviewDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiDashboardTest" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="loginTest" />
-      <option name="METHOD_NAME" value="testLogout" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="overviewDataTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -118,13 +104,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="userManageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiDashboardTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="userManageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.userManageTest" />
         <item itemvalue="TestNG.loginTest" />
-        <item itemvalue="TestNG.loginTest.testLogout" />
         <item itemvalue="TestNG.signupTest" />
-        <item itemvalue="TestNG.apiTest.testInvalidTokenGetData" />
-        <item itemvalue="TestNG.apiTest.testNoTokenGetData" />
+        <item itemvalue="TestNG.chartTest" />
+        <item itemvalue="TestNG.overviewDataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +160,8 @@
       <workItem from="1684572985816" duration="8181000" />
       <workItem from="1684744814186" duration="4368000" />
       <workItem from="1684754216630" duration="385000" />
-      <workItem from="1684764745893" duration="2833000" />
+      <workItem from="1684764745893" duration="4894000" />
+      <workItem from="1684844411486" duration="3067000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1682948306113</created>
